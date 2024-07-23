@@ -1,0 +1,14 @@
+﻿@model Instrumento
+
+<div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+    <div class="card">
+        <img src="@Model.ImagemUrl" class="card-img-top img-fluid" alt="@Model.InstrumentoNome">
+        <div class="card-body">
+            <h5 class="card-title">@Model.InstrumentoNome</h5>
+            <p class="card-text">@Model.Resumo</p>
+            <h3>Preço: @Model.Preco.ToString("c")</h3>
+            <a href="@Url.Action("Details", "Instrumentos", new { instrumentoId = @Model.InstrumentoId })" class="btn btn-link">Mais detalhes</a>
+            <a href="@Url.Action("AdicionarItemNoCarrinhoCompra", "CarrinhoCompra", new { instrumentoId = @Model.InstrumentoId })" class="btn btn-primary">Incluir no Carrinho</a>
+        </div>
+    </div>
+</div>

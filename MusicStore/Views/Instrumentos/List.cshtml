@@ -1,0 +1,12 @@
+﻿@model InstrumentosListViewModel
+
+<div><h2>@Model.CategoriaAtual</h2></div>
+
+<div class="container">
+    <div class="row">
+        @foreach(var instrumentos in Model.Instrumentos)
+        {
+            <partial name="_InstrumentosResumo" for="@instrumentos" />
+        }
+    </div>
+</div>
